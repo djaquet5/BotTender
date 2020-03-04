@@ -13,16 +13,33 @@ object SpellChecker {
     */
   // TODO - Step 2
   def stringDistance(s1: String, s2: String): Int = {
-    var d = Array.ofDim[Int](s1.length+1, s2.length+1)
+    /*var d = Array.ofDim[Int](s1.length+1, s2.length+1)
     for(i <- (0 to s1.length)){ d(i)(0) = i}
     for(j <- (0 to s2.length)){ d(0)(j) = j}
 
     for{i <- 1 to s1.length
         j <- 1 to s2.length}
-    {
       d(i)(j) = Math.min(Math.min(d(i-1)(j)+1, d(i)(j-1) + 1), d(i-1)(j-1) + substitutionCost(s1.charAt(i-1), s2.charAt(j-1)))
+    def loop(i: Int, j: Int, d: Array[Array[Int]]): Int = {
+
     }
-    d(s1.length)(s2.length)
+
+    d(s1.length)(s2.length)*/
+
+    def LevenshteinDistance(v: String, w: String): Int = {
+      /* base case: empty strings */
+      if (v.isEmpty) return w.length
+      if (w.isEmpty) return v.length
+
+      /* return minimum of delete char from s, delete char from t, and delete char from both */
+      Math.min(
+        Math.min(LevenshteinDistance(v.substring(0, v.length-1), w) + 1,
+          LevenshteinDistance(v, w.substring(0, w.length-1)) + 1),
+        LevenshteinDistance(v.substring(0, v.length-1), w.substring(0, w.length-1)) + substitutionCost(v.charAt(v.length-1), w.charAt(w.length-1))
+      )
+    }
+
+    LevenshteinDistance(s1, s2)
   }
 
   /**

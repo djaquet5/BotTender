@@ -12,7 +12,7 @@ class Tokenizer(input: String) {
     * Separate the user's input into tokens.
     */
   // TODO - Step 3
-  def tokenize(): Unit = tokens = input.replaceAll("\\W", "")
+  def tokenize(): Unit = tokens = input.replaceAll("[^a-zA-Z0-9_ ]", " ")
     .replaceAll(" +", " ").split(" ").toList
 
   /**
@@ -25,32 +25,25 @@ class Tokenizer(input: String) {
     case x::xs => {
       tokens = xs
       if(Dictionary.dictionary.contains(x)){
-        dictionary(x) match {
-          case "bonjour" => ("bonjour", Tokens.BONJOUR)
-          case "je" => ("je", Tokens.JE)
-          case "vouloir" => ("vouloir", Tokens.VOULOIR)
-          case "etre" => ("etre", Tokens.ETRE)
-          case "croissant" => ("croissant", Tokens.CROISSANT)
-          case "biere" => ("biere", Tokens.BIERE)
-          case "et" => ("et", Tokens.ET)
-          case "ou" => ("ou", Tokens.OU)
-          case "svp" => ("svp", Tokens.UNKNOWN)
-        }
+        dicoCaseHelper(dictionary(x))
       }else if(x.startsWith("_")){
         (x.tail.head.toUpper +: x.tail.tail, Tokens.PSEUDO)
       }else{
-        dictionary(getClosestWordInDictionary(x)) match {
-          case "bonjour" => ("bonjour", Tokens.BONJOUR)
-          case "je" => ("je", Tokens.JE)
-          case "vouloir" => ("vouloir", Tokens.VOULOIR)
-          case "etre" => ("etre", Tokens.ETRE)
-          case "croissant" => ("croissant", Tokens.CROISSANT)
-          case "biere" => ("biere", Tokens.BIERE)
-          case "et" => ("et", Tokens.ET)
-          case "ou" => ("ou", Tokens.OU)
-          case "svp" => ("svp", Tokens.UNKNOWN)
-        }
+        dicoCaseHelper(dictionary(getClosestWordInDictionary(x)))
       }
     }
+  }
+
+  def dicoCaseHelper(str: String): (String, Token) = str match {
+    case "bonjour" => ("bonjour", Tokens.BONJOUR)
+    case "je" => ("je", Tokens.JE)
+    case "vouloir" => ("vouloir", Tokens.VOULOIR)
+    case "etre" => ("etre", Tokens.ETRE)
+    case "croissant" => ("croissant", Tokens.CROISSANT)
+    case "biere" => ("biere", Tokens.BIERE)
+    case "et" => ("et", Tokens.ET)
+    case "ou" => ("ou", Tokens.OU)
+    case "svp" => ("svp", Tokens.UNKNOWN)
+    case _ => ("unknown", Tokens.UNKNOWN)
   }
 }

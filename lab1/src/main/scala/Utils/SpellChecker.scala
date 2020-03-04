@@ -13,7 +13,7 @@ object SpellChecker {
     */
   // TODO - Step 2
   def stringDistance(s1: String, s2: String): Int = {
-    var d = Array.ofDim[Int](s1.length, s2.length)
+    var d = Array.ofDim[Int](s1.length+1, s2.length+1)
     for(i <- (0 to s1.length)){ d(i)(0) = i}
     for(j <- (0 to s2.length)){ d(0)(j) = j}
 

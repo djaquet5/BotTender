@@ -4,6 +4,7 @@
     <list default="true" id="a3aa9499-70db-45d5-b2fe-56cfda40d827" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Chat/Tokenizer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Chat/Tokenizer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Utils/SpellChecker.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Utils/SpellChecker.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583239070060</updated>
-      <workItem from="1583239072567" duration="12299000" />
+      <workItem from="1583239072567" duration="16388000" />
     </task>
     <servers />
   </component>
@@ -113,22 +114,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1583326307555">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1583336496602">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583326307555" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1583326307555">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583336496602" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1583336496602">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583326307555" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1583326307555">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583336496602" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1583336496601">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583326307555" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1583326307555">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583336496601" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1583336496602">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583326307555" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583336496602" />
     <state x="437" y="207" key="NewModule_or_Project.wizard" timestamp="1583239117237">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

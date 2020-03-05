@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3aa9499-70db-45d5-b2fe-56cfda40d827" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Chat/Tokenizer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Chat/Tokenizer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Utils/ClinksCalculator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Utils/ClinksCalculator.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Utils/SpellChecker.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Utils/SpellChecker.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +108,7 @@
       <updated>1583239070060</updated>
       <workItem from="1583239072567" duration="21028000" />
       <workItem from="1583341463811" duration="219000" />
-      <workItem from="1583402046879" duration="306000" />
+      <workItem from="1583402046879" duration="701000" />
     </task>
     <servers />
   </component>

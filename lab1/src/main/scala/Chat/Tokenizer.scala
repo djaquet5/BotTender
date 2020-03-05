@@ -26,8 +26,10 @@ class Tokenizer(input: String) {
       tokens = xs
       if(Dictionary.dictionary.contains(x)){
         dicoCaseHelper(dictionary(x))
-      }else if(x.startsWith("_")){
+      }else if(x.startsWith("_")) {
         (x.tail.head.toUpper +: x.tail.tail, Tokens.PSEUDO)
+      }else if(x forall Character.isDigit){
+        (x, Tokens.NUM)
       }else{
         dicoCaseHelper(dictionary(getClosestWordInDictionary(x)))
       }

@@ -55,10 +55,10 @@ object SpellChecker {
   def findClosest(m: String): String = {
     val dico = dictionary.map(pair => pair._1 -> stringDistance(pair._1, m)).toList.sortBy(_._2)
     //we discard every pair where the int is not equal to the smallest int
-    def filterDico(l: List[(String, Int)]): List[(String, Int)] = l match {
-      case Nil => List()
-      case x::xs => if(xs.isEmpty) List(x) else if(x._2 != xs.head._2) List(x) else x::filterDico(xs)
+    def filterDico(l: List[(String, Int)], acc: List[(String, Int)]): List[(String, Int)] = l match {
+      case Nil => acc
+      case x::xs => if(xs.isEmpty) List(x) else if(x._2 != xs.head._2) List(x) else filterDico(xs, x::acc)
     }
-    filterDico(dico).sortBy(_._1).head._1
+    filterDico(dico, List()).minBy(_._1)._1
   }
 }

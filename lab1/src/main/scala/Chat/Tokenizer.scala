@@ -1,9 +1,12 @@
 package Chat
 
+import java.text.Normalizer
+
 import Tokens._
 import Utils.Dictionary.dictionary
 import Utils.{Dictionary, SpellChecker}
 import Utils.SpellChecker._
+
 
 class Tokenizer(input: String) {
 
@@ -12,7 +15,7 @@ class Tokenizer(input: String) {
     * Separate the user's input into tokens.
     */
   // TODO - Step 3
-  def tokenize(): Unit = tokens = input.replaceAll("[^a-zA-Z0-9_ ]", " ")
+  def tokenize(): Unit = tokens = input/*Normalizer.normalize(input, Normalizer.Form.NFD)*/.replaceAll("[^a-zA-Z0-9_ ]", " ")
     .replaceAll(" +", " ").split(" ").toList
 
   /**
@@ -23,11 +26,12 @@ class Tokenizer(input: String) {
   def nextToken(): (String, Token) = tokens match {
     case Nil => ("EOL", Tokens.EOL)
     case x::xs => {
+      println(tokens)
       tokens = xs
       if(Dictionary.dictionary.contains(x)){
         dicoCaseHelper(dictionary(x))
       }else if(x.startsWith("_")) {
-        (x.tail.head.toUpper +: x.tail.tail, Tokens.PSEUDO)
+        (x, Tokens.PSEUDO)
       }else if(x forall Character.isDigit){
         (x, Tokens.NUM)
       }else{

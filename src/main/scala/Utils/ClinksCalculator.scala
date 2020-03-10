@@ -11,8 +11,6 @@ object ClinksCalculator {
     */
   // TODO - Step 1
   def factorial(n: Int): Int = {
-    //make it tail recursive
-    // TODO check if tail recursive
     def loop(x: Int, acc: Int): Int = x match {
       case 0 => acc
       case _ => loop(x-1, x*acc)

@@ -14,7 +14,7 @@ object SpellChecker {
   // TODO - Step 2
   def stringDistance(s1: String, s2: String): Int = {
 
-    // TODO check if tail recursive
+    // TODO make it tail recursive
     def LevenshteinDistance(v: String, w: String): Int = {
       /* base case: empty strings */
       if (v.isEmpty) return w.length

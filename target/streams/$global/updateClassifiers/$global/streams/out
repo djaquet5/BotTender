@@ -285,21 +285,21 @@
 [debug] == resolving dependencies bot-tender#bot-tender$sources;0.1->jline#jline;2.14.6 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.13.1!scala-library.jar(src)
+[debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.12!jansi.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.13.1!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.13.1!scala-reflect.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.13.1!scala-compiler.jar(src)
-[debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.12!jansi.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.13.1!scala-library.jar(src)
-[debug] :: resolution report :: resolve 29ms :: artifacts dl 3ms
-[debug] 	report for bot-tender#bot-tender$sources;0.1 compile produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-compile.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 runtime produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-runtime.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 test produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-test.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 provided produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-provided.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 optional produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-optional.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 compile-internal produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-compile-internal.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 runtime-internal produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-runtime-internal.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 test-internal produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-test-internal.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 plugin produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-plugin.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 pom produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-pom.xml
-[debug] 	report for bot-tender#bot-tender$sources;0.1 scala-tool produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\lab1\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-scala-tool.xml
-[debug] 	resolve done (29ms resolve - 3ms download)
+[debug] :: resolution report :: resolve 36ms :: artifacts dl 11ms
+[debug] 	report for bot-tender#bot-tender$sources;0.1 compile produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-compile.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 runtime produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-runtime.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 test produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-test.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 provided produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-provided.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 optional produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-optional.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 compile-internal produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-compile-internal.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 runtime-internal produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-runtime-internal.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 test-internal produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-test-internal.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 plugin produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-plugin.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 pom produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-pom.xml
+[debug] 	report for bot-tender#bot-tender$sources;0.1 scala-tool produced in C:\Users\batac\Documents\heig\semestre_6\SCALA\BotTender\target\scala-2.13\resolution-cache\reports\bot-tender-bot-tender$sources-scala-tool.xml
+[debug] 	resolve done (36ms resolve - 11ms download)

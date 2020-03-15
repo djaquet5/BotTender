@@ -12,12 +12,11 @@ class Tokenizer(input: String) {
   /**
     * Separate the user's input into tokens.
     */
-  // TODO - Step 3
   def tokenize(): Unit =
-    tokens = removeDiacritic(input) //we remove accents
-      .replaceAll("[^a-zA-Z0-9_ ]", " ") // we replace every character that are not alphanumeric or _
-    .replaceAll(" +", " ") // replacing multiple blank space
-      .split(" ") //splitting the string into a list of words separated by blank spaces
+    tokens = removeDiacritic(input)                           // Accents removal
+      .replaceAll("[^a-zA-Z0-9_ ]", " ") // Replacing every character that are not alphanumeric or _ by a space
+      .replaceAll(" +", " ")             // Multiple blank space removal
+      .split(" ")                                     // Splitting the string into a list of words separated by blank spaces
       .toList
 
 
@@ -25,18 +24,18 @@ class Tokenizer(input: String) {
     * Get the next token of the user input, or OEL if there is no more token.
   	* @return a tuple that contains the string value of the current token, and the identifier of the token
     */
-  // TODO - Step 3
   def nextToken(): (String, Token) = tokens match {
     case Nil => ("EOL", Tokens.EOL)
     case x::xs => {
       tokens = xs
-      if(Dictionary.dictionary.contains(x)){
+
+      if(Dictionary.dictionary.contains(x)) {
         dicoCaseHelper(dictionary(x))
-      }else if(x.startsWith("_")) {
+      } else if(x.startsWith("_")) {
         (x, Tokens.PSEUDO)
-      }else if(x forall Character.isDigit){
+      } else if(x forall Character.isDigit) {
         (x, Tokens.NUM)
-      }else{
+      } else {
         dicoCaseHelper(dictionary(getClosestWordInDictionary(x)))
       }
     }

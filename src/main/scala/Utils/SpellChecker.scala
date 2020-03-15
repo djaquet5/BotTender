@@ -11,20 +11,27 @@ object SpellChecker {
     * @param s2 the second word
     * @return an integer value, which indicates the Levenshtein distance between "s1" and "s2"
     */
-  // TODO - Step 2
   def stringDistance(s1: String, s2: String): Int = {
 
-    // TODO make it tail recursive
-    def LevenshteinDistance(v: String, w: String): Int = {
-      /* base case: empty strings */
-      if (v.isEmpty) return w.length
-      if (w.isEmpty) return v.length
+    def LevenshteinDistance(firstWord: String, secondWord: String): Int = {
 
-      /* return minimum of delete char from s, delete char from t, and delete char from both */
+      // Check if one of the word is empty (base case)
+      if (firstWord.isEmpty) return secondWord.length
+      if (secondWord.isEmpty) return firstWord.length
+
+      val firstWordReduced = firstWord.substring(0, firstWord.length-1)
+      val secondWordReduced = secondWord.substring(0, secondWord.length-1)
+
+      // Return the minimum between the delete char from firstWord, from secondWord and from both
       Math.min(
-        Math.min(LevenshteinDistance(v.substring(0, v.length-1), w) + 1,
-          LevenshteinDistance(v, w.substring(0, w.length-1)) + 1),
-        LevenshteinDistance(v.substring(0, v.length-1), w.substring(0, w.length-1)) + substitutionCost(v.charAt(v.length-1), w.charAt(w.length-1))
+        Math.min(
+          LevenshteinDistance(firstWordReduced, secondWord) + 1,
+          LevenshteinDistance(firstWord, secondWordReduced) + 1
+        ),
+
+        // Sum the Levenshtein Distance to the cost of the substitution
+        LevenshteinDistance(firstWordReduced, secondWordReduced) +
+          substitutionCost(firstWord.charAt(firstWord.length-1), secondWord.charAt(secondWord.length-1))
       )
     }
 
@@ -45,7 +52,6 @@ object SpellChecker {
     * @param misspelledWord the misspelled word to correct
     * @return the closest word from "misspelledWord"
     */
-  // TODO - Step 2
   def getClosestWordInDictionary(misspelledWord: String): String = misspelledWord match {
     case a if a startsWith "_" => misspelledWord
     case b if b forall Character.isDigit => misspelledWord
@@ -54,7 +60,7 @@ object SpellChecker {
 
   def findClosest(m: String): String = {
     val dico = dictionary.map(pair => pair._1 -> stringDistance(pair._1, m)).toList.sortBy(_._2)
-    //we discard every pair where the int is not equal to the smallest int
+    // We discard every pair where the int is not equal to the smallest int
     def filterDico(l: List[(String, Int)], acc: List[(String, Int)]): List[(String, Int)] = l match {
       case Nil => acc
       case x::xs => if(xs.isEmpty) List(x) else if(x._2 != xs.head._2) List(x) else filterDico(xs, x::acc)
